@@ -40,6 +40,8 @@ Users should be able to view the optimal layout for the six sections depending o
 ### Useful resources
 
 - [Icons](https://cdnjs.com/libraries/font-awesome)
+- [Clip-Path](https://bennettfeely.com/clippy/)
+ 
 
 
 
