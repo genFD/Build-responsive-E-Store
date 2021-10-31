@@ -38,3 +38,14 @@ const createslideShow = () => {
   }, 20000);
 };
 // createslideShow();
+
+const sectionthreeContent = document.querySelector('.section-three-content');
+
+window.addEventListener('scroll', () => {
+  if (
+    window.pageYOffset + window.innerHeight >=
+    sectionthreeContent.offsetTop + sectionthreeContent.offsetHeight / 2
+  ) {
+    sectionthreeContent.classList.add('change');
+  }
+});
