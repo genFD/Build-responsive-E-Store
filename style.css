@@ -21,6 +21,9 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+body {
+  font-family: var(--hero-banner-font);
+}
 
 :root {
   --primary-color: #6edae6;
@@ -100,12 +103,13 @@ Section one
   position: absolute;
   top: 0;
   left: 0;
+  /* border: 2px solid blue; */
 }
 .section-one-hero {
   /* border: 2px solid red; */
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 .section-one-hero h1 {
   font-family: var(--hero-banner-font);
@@ -165,7 +169,7 @@ Section one
   );
 }
 .slideshow {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   /* background-color: blue; */
   position: absolute;
@@ -181,7 +185,7 @@ Section one
   background-position: center;
   background-repeat: no-repeat;
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 5s;
 }
 .slideshow div.change {
   opacity: 1;
@@ -189,5 +193,139 @@ Section one
 /*
 =============== 
 End of Section one
+===============
+*/
+
+/*
+=============== 
+Section two
+===============
+*/
+.section-two {
+  /* margin-top: 81.5rem; */
+  padding: 100vh 0;
+  width: 100%;
+  height: 120vh;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-around; */
+  /* position: relative; */
+}
+.section-two-heading {
+  font-size: 10rem;
+  font-weight: 200;
+  color: var(--black-color);
+}
+
+.phones {
+  height: 60vh;
+  width: 50vh;
+  background-image: linear-gradient(var(--primary-color), var(--white-color));
+  border-radius: 0.5rem;
+}
+
+.phones img {
+  width: inherit;
+  height: inherit;
+  object-fit: contain;
+  /* position: absolute; */
+}
+.phone-btns {
+  margin-top: 10rem;
+  display: flex;
+}
+.phone-btn {
+  width: 6rem;
+  height: 6rem;
+  background-image: linear-gradient(
+    to right,
+    rgb(51, 51, 51) 60%,
+    rgb(82, 82, 82)
+  );
+  margin: 0 3rem;
+  border-radius: 50%;
+  position: relative;
+}
+
+.phone-btn::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  display: block;
+  border: 0.1rem solid #6edae6;
+  border-radius: 1rem;
+}
+.phone-btn span {
+  /* display: none; */
+  position: absolute;
+  top: -3rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: var(--primary-color);
+  width: max-content;
+  transform: scale(0);
+  transition: transform 0.2s;
+}
+
+.phone-btn:hover span {
+  transform: scale(1);
+}
+/*
+=============== 
+End of Section two
+===============
+*/
+/*
+=============== 
+ Section three
+===============
+*/
+.section-three {
+  width: 100%;
+  height: 100%;
+  background-color: var(--black-color);
+  display: flex;
+  flex-direction: column;
+  padding: 15rem 0;
+}
+.section-three-heading {
+  font-size: 10rem;
+  font-weight: 200;
+  color: var(--primary-color);
+  margin-bottom: 15rem;
+}
+.section-three-content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  perspective: 1000rem;
+  position: relative;
+}
+.section-three-content img {
+  width: inherit;
+}
+.loading-wrapper {
+  position: absolute;
+  top: 6%;
+  width: 60%;
+  height: 85%;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.4),
+      rgba(255, 255, 255, 0.4)
+    ),
+    url(./images/TopBook/topbook-1-desktop.png) center no-repeat;
+  z-index: -1;
+}
+.topbook-info {
+  position: absolute;
+}
+/*
+=============== 
+End of Section three
 ===============
 */
